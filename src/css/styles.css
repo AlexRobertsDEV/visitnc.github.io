@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, .font-semibold, .font-bold, .font-medium, button#backToTopButton, button#contactUsButton {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(-45deg, #783CE2, #1E79C8, #783CE2, #1E79C8);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+}
+
+.grad-white {
+    background: linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0));
+}
+
+
+body {
+    background-image: url('../images/y-so-serious-white.png');
+    background-attachment: fixed;
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: 0 center;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: center 0%;
+    }
+    to {
+        background-position: center 100%;
+    }
+}
+
+.iframe_box.custom-hide.aos-init.aos-animate {
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+/* Custom CSS */
+@media screen and (max-width: 800px) {
+    .custom-hide {
+        display: none;
+    }
+}
+
+ol#footer_social_links, ul#footer_nav_links {
+    align-items: center;
+}
+
+ol#footer_social_links {
+    flex-direction: row-reverse;
+}
+
+ul#footer_nav_links {
+    flex-direction: row;
+}
+
+#footer_social_links li {
+    float: left;
+    margin-right: 10px;
+}
+
+#footer_social_links:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+#contactUsButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #783ce2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contactUsButton:hover {
+    background-color: #1e78c8;
+}
+
+#backToTopButton {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    padding: 5px 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+#backToTopButton:hover {
+    background-color: #0056b3;
+}
+
+button#visitTodayButton {
+    background: #1E79C8;
+    transition: all ease 0.5s;
+}
+
+button#visitTodayButton:hover {
+    background: #783CE2;
+    transition: all ease 0.5s;
+}
